@@ -19,5 +19,8 @@ public class Restaurant {
     private String state;
     private String telephone;
 
+    @OneToMany(mappedBy = "restaurant",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
     private ArrayList<Menu> menus = new ArrayList<>();
 }
